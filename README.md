@@ -33,6 +33,38 @@ estrutura de pacotes e nas classes dentro de um projeto JAVA típico.
     * ```git clone https://github.com/NExT-2023-1/aula17.git```
 2. pronto, pode usar.
 
+## Atividade
+
+impletamente as classes do diagrama abaixo, de acordo com as seguintes definições:
+
+1. Classe ContaCorrente
+    * Implementa a interface Serializable
+    * Atributos: número (String), saldo (double), nome do correntista (String)
+    * Métodos:
+        * Construtor padrão e construtor com todos os atributos.
+        * Get para todos os atributos.
+        * Set para todos os atributos menos o saldo.
+        * void creditar(double valor): saldo = saldo + valor
+        * void debitar(double valor): saldo = saldo - valor
+2. Classe ContaPoupanca:
+    * Herda de ContaCorrente
+    * Atributos: percentual de bônus (double).
+    * Métodos:
+        *Construtor padrão e construtor com todos os atributos.
+        * Get para todos os atributos.
+        * Set para todos os atributos.
+        * @Override
+        * void creditar(double valor): saldo = saldo + valor *(1 + percentual de bônus / 100)
+3. Classe DAOContaCorrente
+    * Atributos: cadastro, do tipo CadastroObjeto.
+    * O identificador único de uma conta corrente e de uma conta poupança é o seu número.
+    * Métodos:
+        * boolean incluir(ContaCorrente conta)
+        * boolean alterar(ContaCorrente conta)
+        * ContaCorrente buscar(String numero)
+        * LIst<ContaCorrente> buscarTodos()
+    >> Implementar os métodos segundo o código do DAOProduto.
+
 ## Getting Started
 
 Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
