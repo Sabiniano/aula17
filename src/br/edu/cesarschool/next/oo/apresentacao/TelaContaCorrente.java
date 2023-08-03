@@ -2,6 +2,8 @@ package br.edu.cesarschool.next.oo.apresentacao;
 
 import java.util.List;
 import java.util.Scanner;
+import java.io.*;
+import java.lang.Thread;
 
 import br.edu.cesarschool.next.oo.entidade.ContaCorrente;
 import br.edu.cesarschool.next.oo.entidade.ContaPoupanca;
@@ -39,6 +41,7 @@ public class TelaContaCorrente {
 					break;
 				case 5:
 					gerarRelatorioGeral();
+					try{Thread.sleep(7000);}catch(InterruptedException e){System.out.println(e);}
 					break;
 				case 6:
 					System.out.println("Encerrando...");
@@ -132,6 +135,7 @@ public class TelaContaCorrente {
 	private void gerarRelatorioGeral() {
 		List<ContaCorrente> contas = mediatorContaCorrente.gerarRelatorioGeral();
 		System.out.println("Relatório Geral de Contas:");
+		System.out.println("--------------------------");
 		for (ContaCorrente conta : contas) {
 			System.out.println(conta);
 		}
