@@ -41,7 +41,9 @@ public class TelaContaCorrente {
 					break;
 				case 5:
 					gerarRelatorioGeral();
-					try{Thread.sleep(7000);}catch(InterruptedException e){System.out.println(e);}
+					//try{Thread.sleep(7000);}catch(InterruptedException e){System.out.println(e);}
+					ENTRADA.nextLine();
+					ENTRADA.nextLine();
 					break;
 				case 6:
 					System.out.println("Encerrando...");
